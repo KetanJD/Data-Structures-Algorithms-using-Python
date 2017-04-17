@@ -1,0 +1,19 @@
+#Algorithm
+
+Evaluate Postfix (exp)
+{
+create a stack s
+for i = 0 to length(exp) – 1
+{
+  if exp[i] is operand
+    push (exp[i])
+  else if exp[i] is operator
+  {
+    op2 = pop()
+    op1 = pop()
+    result = perform (exp[i], op1, op2)
+    push (result)
+  }
+}
+return top of the stack
+}
