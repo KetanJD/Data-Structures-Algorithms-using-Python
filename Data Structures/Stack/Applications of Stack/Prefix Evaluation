@@ -1,0 +1,18 @@
+#Algorithm
+Evaluate Prefix (exp)
+{
+create a stack s
+for i = length(exp) – 1 down to 0
+{
+if exp[i] is operand
+push (exp[i])
+else if exp[i] is operator
+{
+op1 = pop()
+op2 = pop()
+result = perform (exp[i], op1, op2)
+push (result)
+}
+}
+return top of the stack
+}
