@@ -1,0 +1,26 @@
+Algorithm:
+Infix to postfix (exp)
+{
+create a stack s
+result = empty string
+for i = 0 to length(exp)-1
+{
+  if exp[i] is operand
+  result = result + exp[i]
+  else if exp[i] is operator
+  {
+    while stack is not empty and has higher precedence (top of the stack, exp[i])
+     {
+      result = result + s.top()
+      s.pop()
+     }
+     s.push (exp[i])
+  }
+}
+while stack is not empty
+{
+  result = result + s.top ()
+  s.pop()
+}
+return result
+}
